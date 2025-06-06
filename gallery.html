@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Bella Vista Restaurant</title>
+    <meta name="description" content="Explore our gallery showcasing beautiful dishes, restaurant ambiance, and dining experiences at Bella Vista.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Bella Vista</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Gallery</h1>
+            <p class="page-subtitle">A visual journey through our culinary creations and dining experience</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="food">Food</button>
+                <button class="filter-btn" data-filter="ambiance">Ambiance</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="team">Team</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Food Images -->
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <i class="fas fa-utensils gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Truffle Risotto</h3>
+                            <p>Our signature creamy risotto with black truffle</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <i class="fas fa-fish gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Pan-Seared Salmon</h3>
+                            <p>Fresh Atlantic salmon with seasonal vegetables</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <i class="fas fa-pizza-slice gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Margherita Pizza</h3>
+                            <p>Traditional Neapolitan pizza with fresh mozzarella</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <i class="fas fa-ice-cream gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Tiramisu</h3>
+                            <p>Classic Italian dessert with espresso and mascarpone</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <i class="fas fa-cheese gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Burrata & Prosciutto</h3>
+                            <p>Creamy burrata with San Daniele prosciutto</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="food">
+                    <div class="gallery-image">
+                        <i class="fas fa-wine-glass-alt gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Wine Pairing</h3>
+                            <p>Carefully selected wines to complement your meal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ambiance Images -->
+                <div class="gallery-item" data-category="ambiance">
+                    <div class="gallery-image">
+                        <i class="fas fa-chair gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Dining Room</h3>
+                            <p>Elegant dining space with warm atmosphere</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ambiance">
+                    <div class="gallery-image">
+                        <i class="fas fa-lightbulb gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Evening Ambiance</h3>
+                            <p>Romantic lighting for perfect dinner dates</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ambiance">
+                    <div class="gallery-image">
+                        <i class="fas fa-door-open gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Restaurant Entrance</h3>
+                            <p>Welcome to Bella Vista's inviting entrance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ambiance">
+                    <div class="gallery-image">
+                        <i class="fas fa-couch gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Lounge Area</h3>
+                            <p>Comfortable seating for pre-dinner cocktails</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Images -->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <i class="fas fa-birthday-cake gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Birthday Celebration</h3>
+                            <p>Making special occasions memorable</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <i class="fas fa-heart gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Anniversary Dinner</h3>
+                            <p>Romantic celebrations for couples</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <i class="fas fa-users gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Private Events</h3>
+                            <p>Exclusive dining experiences for groups</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <i class="fas fa-champagne-glasses gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Wine Tasting</h3>
+                            <p>Special wine tasting events and pairings</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Images -->
+                <div class="gallery-item" data-category="team">
+                    <div class="gallery-image">
+                        <i class="fas fa-user-tie gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Chef Marco</h3>
+                            <p>Our executive chef creating culinary masterpieces</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="team">
+                    <div class="gallery-image">
+                        <i class="fas fa-users-cog gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Kitchen Team</h3>
+                            <p>Our talented culinary team at work</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="team">
+                    <div class="gallery-image">
+                        <i class="fas fa-concierge-bell gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Service Team</h3>
+                            <p>Dedicated staff providing exceptional service</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="team">
+                    <div class="gallery-image">
+                        <i class="fas fa-handshake gallery-placeholder"></i>
+                        <div class="gallery-overlay">
+                            <h3>Team Spirit</h3>
+                            <p>Our unified team working together</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-image">
+                <i class="fas fa-image modal-placeholder"></i>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle">Image Title</h3>
+                <p id="modalDescription">Image description</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation CTA -->
+    <section class="reservation-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Experience It Yourself</h2>
+                <p>Book your table and become part of our gallery of satisfied guests</p>
+                <a href="contact.html" class="btn btn-primary">Make Reservation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bella Vista</h3>
+                    <p>Experience the finest Italian cuisine with locally sourced ingredients and exceptional service.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Culinary Street, Food District</p>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@bellavista.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <div class="hours-info">
+                        <p>Monday - Thursday: 5:00 PM - 10:00 PM</p>
+                        <p>Friday - Saturday: 5:00 PM - 11:00 PM</p>
+                        <p>Sunday: 4:00 PM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

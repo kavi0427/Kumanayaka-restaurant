@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" aria-label="Bella Vista Restaurant story illustration featuring cooking elements and Italian cuisine">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E67300" />
+      <stop offset="100%" stop-color="#FF8C1A" />
+    </linearGradient>
+    
+    <linearGradient id="secondaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#303D4F" />
+      <stop offset="100%" stop-color="#4A5B72" />
+    </linearGradient>
+    
+    <radialGradient id="plateGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F5F7FA" />
+      <stop offset="100%" stop-color="#E1E5E9" />
+    </radialGradient>
+    
+    <linearGradient id="steamGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.8)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0.4)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.1)" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(48,61,79,0.2)"/>
+    </filter>
+    
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#primaryGradient)" filter="url(#dropShadow)"/>
+  
+  <!-- Inner decorative ring -->
+  <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Central cooking scene -->
+  <g transform="translate(200, 200)">
+    
+    <!-- Chef's hat -->
+    <g transform="translate(0, -80)">
+      <!-- Hat base -->
+      <ellipse cx="0" cy="15" rx="35" ry="8" fill="url(#plateGradient)" filter="url(#dropShadow)"/>
+      <!-- Hat top -->
+      <path d="M-35,15 Q-35,-15 -20,-30 Q-10,-40 0,-40 Q10,-40 20,-30 Q35,-15 35,15" 
+            fill="url(#plateGradient)" filter="url(#dropShadow)"/>
+      <!-- Hat details -->
+      <path d="M-25,5 Q0,-5 25,5" fill="none" stroke="rgba(48,61,79,0.1)" stroke-width="1"/>
+      <circle cx="0" cy="-20" r="2" fill="rgba(230,115,0,0.3)"/>
+    </g>
+
+    <!-- Cooking pot -->
+    <g transform="translate(0, -20)">
+      <!-- Pot body -->
+      <ellipse cx="0" cy="20" rx="45" ry="25" fill="url(#secondaryGradient)" filter="url(#dropShadow)"/>
+      <rect x="-45" y="5" width="90" height="30" fill="url(#secondaryGradient)"/>
+      <ellipse cx="0" cy="5" rx="45" ry="25" fill="#4A5B72"/>
+      
+      <!-- Pot handles -->
+      <path d="M-50,15 Q-60,15 -60,25 Q-60,35 -50,35" 
+            fill="none" stroke="#303D4F" stroke-width="4" stroke-linecap="round"/>
+      <path d="M50,15 Q60,15 60,25 Q60,35 50,35" 
+            fill="none" stroke="#303D4F" stroke-width="4" stroke-linecap="round"/>
+      
+      <!-- Pot lid -->
+      <ellipse cx="0" cy="5" rx="40" ry="20" fill="#5A6B82"/>
+      <circle cx="0" cy="5" r="4" fill="#303D4F"/>
+      
+      <!-- Steam -->
+      <g opacity="0.7">
+        <path d="M-15,-5 Q-20,-15 -15,-25 Q-10,-35 -15,-45" 
+              fill="none" stroke="url(#steamGradient)" stroke-width="2" stroke-linecap="round">
+          <animate attributeName="d" 
+                   values="M-15,-5 Q-20,-15 -15,-25 Q-10,-35 -15,-45;
+                           M-15,-5 Q-10,-15 -15,-25 Q-20,-35 -15,-45;
+                           M-15,-5 Q-20,-15 -15,-25 Q-10,-35 -15,-45" 
+                   dur="3s" repeatCount="indefinite"/>
+        </path>
+        <path d="M0,-5 Q-5,-15 0,-25 Q5,-35 0,-45" 
+              fill="none" stroke="url(#steamGradient)" stroke-width="2" stroke-linecap="round">
+          <animate attributeName="d" 
+                   values="M0,-5 Q-5,-15 0,-25 Q5,-35 0,-45;
+                           M0,-5 Q5,-15 0,-25 Q-5,-35 0,-45;
+                           M0,-5 Q-5,-15 0,-25 Q5,-35 0,-45" 
+                   dur="2.5s" repeatCount="indefinite"/>
+        </path>
+        <path d="M15,-5 Q20,-15 15,-25 Q10,-35 15,-45" 
+              fill="none" stroke="url(#steamGradient)" stroke-width="2" stroke-linecap="round">
+          <animate attributeName="d" 
+                   values="M15,-5 Q20,-15 15,-25 Q10,-35 15,-45;
+                           M15,-5 Q10,-15 15,-25 Q20,-35 15,-45;
+                           M15,-5 Q20,-15 15,-25 Q10,-35 15,-45" 
+                   dur="3.5s" repeatCount="indefinite"/>
+        </path>
+      </g>
+    </g>
+
+    <!-- Plate with pasta -->
+    <g transform="translate(-60, 40)">
+      <!-- Plate -->
+      <ellipse cx="0" cy="0" rx="30" ry="25" fill="url(#plateGradient)" filter="url(#dropShadow)"/>
+      <ellipse cx="0" cy="0" rx="25" ry="20" fill="#FFFFFF"/>
+      
+      <!-- Pasta (spaghetti swirls) -->
+      <g opacity="0.8">
+        <path d="M-15,-10 Q-10,-5 -5,-10 Q0,-15 5,-10 Q10,-5 15,-10" 
+              fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-12,0 Q-7,5 -2,0 Q3,-5 8,0 Q13,5 18,0" 
+              fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-10,8 Q-5,13 0,8 Q5,3 10,8" 
+              fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+        <!-- Sauce spots -->
+        <circle cx="-8" cy="-3" r="1.5" fill="#E67300" opacity="0.7"/>
+        <circle cx="5" cy="2" r="1" fill="#E67300" opacity="0.7"/>
+        <circle cx="-2" cy="6" r="1.2" fill="#E67300" opacity="0.7"/>
+      </g>
+    </g>
+
+    <!-- Wine bottle and glass -->
+    <g transform="translate(65, 35)">
+      <!-- Wine bottle -->
+      <rect x="-4" y="-15" width="8" height="30" rx="2" fill="url(#secondaryGradient)" filter="url(#dropShadow)"/>
+      <rect x="-3" y="-20" width="6" height="8" fill="#303D4F"/>
+      <rect x="-2" y="-25" width="4" height="5" fill="#4A5B72"/>
+      
+      <!-- Wine glass -->
+      <g transform="translate(20, 0)">
+        <ellipse cx="0" cy="-5" rx="8" ry="6" fill="rgba(255,255,255,0.9)" filter="url(#dropShadow)"/>
+        <rect x="-1" y="1" width="2" height="12" fill="rgba(255,255,255,0.9)"/>
+        <ellipse cx="0" cy="13" rx="6" ry="2" fill="rgba(255,255,255,0.9)"/>
+        <!-- Wine in glass -->
+        <ellipse cx="0" cy="-2" rx="6" ry="4" fill="rgba(139,69,19,0.6)"/>
+      </g>
+    </g>
+
+    <!-- Cooking utensils -->
+    <g transform="translate(-80, 0)">
+      <!-- Wooden spoon -->
+      <ellipse cx="0" cy="-20" rx="6" ry="10" fill="#D2B48C" filter="url(#dropShadow)"/>
+      <rect x="-1.5" y="-10" width="3" height="25" fill="#D2B48C"/>
+      
+      <!-- Whisk -->
+      <g transform="translate(15, 0)">
+        <rect x="-0.5" y="-15" width="1" height="20" fill="#C0C0C0"/>
+        <path d="M-3,-15 L-3,-25 M-1,-15 L-1,-25 M1,-15 L1,-25 M3,-15 L3,-25" 
+              stroke="#C0C0C0" stroke-width="0.5"/>
+        <ellipse cx="0" cy="-25" rx="3" ry="2" fill="none" stroke="#C0C0C0" stroke-width="0.5"/>
+      </g>
+    </g>
+
+    <!-- Herbs and ingredients -->
+    <g transform="translate(80, -40)" opacity="0.6">
+      <!-- Basil leaves -->
+      <ellipse cx="0" cy="0" rx="4" ry="6" fill="#228B22" transform="rotate(15)"/>
+      <ellipse cx="8" cy="5" rx="3" ry="5" fill="#32CD32" transform="rotate(-20)"/>
+      <ellipse cx="-6" cy="8" rx="3" ry="4" fill="#228B22" transform="rotate(45)"/>
+    </g>
+
+    <!-- Italian flag colors accent -->
+    <g transform="translate(-90, 60)" opacity="0.4">
+      <rect x="0" y="0" width="15" height="3" fill="#009246"/>
+      <rect x="0" y="3" width="15" height="3" fill="#FFFFFF"/>
+      <rect x="0" y="6" width="15" height="3" fill="#CE2B37"/>
+    </g>
+
+  </g>
+
+  <!-- Decorative elements around the circle -->
+  <g opacity="0.3">
+    <!-- Small garnish elements -->
+    <circle cx="80" cy="120" r="3" fill="rgba(255,255,255,0.6)">
+      <animate attributeName="r" values="3;4;3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="160" r="2" fill="rgba(255,255,255,0.5)">
+      <animate attributeName="r" values="2;3;2" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="300" r="2.5" fill="rgba(255,255,255,0.4)">
+      <animate attributeName="r" values="2.5;3.5;2.5" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="280" r="3" fill="rgba(255,255,255,0.6)">
+      <animate attributeName="r" values="3;4;3" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Outer decorative ring -->
+  <circle cx="200" cy="200" r="190" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Text curves (decorative) -->
+  <defs>
+    <path id="topCurve" d="M 60,200 A 140,140 0 0,1 340,200"/>
+    <path id="bottomCurve" d="M 340,200 A 140,140 0 0,1 60,200"/>
+  </defs>
+  
+  <text font-family="serif" font-size="12" fill="rgba(255,255,255,0.4)" text-anchor="middle">
+    <textPath href="#topCurve" startOffset="50%">• AUTHENTIC ITALIAN CUISINE •</textPath>
+  </text>
+  
+  <text font-family="serif" font-size="12" fill="rgba(255,255,255,0.4)" text-anchor="middle">
+    <textPath href="#bottomCurve" startOffset="50%">• SINCE 2015 •</textPath>
+  </text>
+</svg>

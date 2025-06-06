@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bella Vista Restaurant</title>
+    <meta name="description" content="Bella Vista Restaurant Admin Dashboard - Manage reservations, menu items, orders, and customer data with our comprehensive management system.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="generated-icon.png">
+</head>
+<body class="admin-body">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-header-content">
+            <div class="admin-brand">
+                <i class="fas fa-utensils"></i>
+                <h1>Bella Vista Admin</h1>
+            </div>
+            
+            <div class="admin-header-actions">
+                <div class="admin-user-info">
+                    <span class="admin-user-name">Admin User</span>
+                    <div class="admin-user-avatar">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                </div>
+                
+                <button id="logoutBtn" class="admin-logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+        <nav class="admin-nav">
+            <ul class="admin-nav-list">
+                <li class="admin-nav-item">
+                    <a href="#dashboard" class="admin-nav-link active" data-section="dashboard">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="admin-nav-item">
+                    <a href="#reservations" class="admin-nav-link" data-section="reservations">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Reservations</span>
+                    </a>
+                </li>
+                <li class="admin-nav-item">
+                    <a href="#orders" class="admin-nav-link" data-section="orders">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="admin-nav-item">
+                    <a href="#menu" class="admin-nav-link" data-section="menu">
+                        <i class="fas fa-utensils"></i>
+                        <span>Menu Management</span>
+                    </a>
+                </li>
+                <li class="admin-nav-item">
+                    <a href="#customers" class="admin-nav-link" data-section="customers">
+                        <i class="fas fa-users"></i>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li class="admin-nav-item">
+                    <a href="#analytics" class="admin-nav-link" data-section="analytics">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="admin-nav-item">
+                    <a href="#settings" class="admin-nav-link" data-section="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="admin-section active">
+            <div class="admin-section-header">
+                <h2>Dashboard Overview</h2>
+                <div class="admin-date">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span id="currentDate"></span>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="admin-stats-grid">
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="admin-stat-content">
+                        <h3 id="todayReservations">0</h3>
+                        <p>Today's Reservations</p>
+                        <small class="admin-stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +15% from yesterday
+                        </small>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="admin-stat-content">
+                        <h3 id="todayOrders">0</h3>
+                        <p>Active Orders</p>
+                        <small class="admin-stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +8% from last week
+                        </small>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="admin-stat-content">
+                        <h3 id="todayRevenue">$0</h3>
+                        <p>Today's Revenue</p>
+                        <small class="admin-stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +22% from yesterday
+                        </small>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="admin-stat-content">
+                        <h3 id="totalCustomers">0</h3>
+                        <p>Total Customers</p>
+                        <small class="admin-stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +5% this month
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="admin-dashboard-grid">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>Recent Reservations</h3>
+                        <a href="#reservations" class="admin-link-btn">View All</a>
+                    </div>
+                    <div class="admin-card-content">
+                        <div id="recentReservations" class="admin-activity-list">
+                            <div class="admin-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <span>Loading reservations...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>Popular Menu Items</h3>
+                        <a href="#menu" class="admin-link-btn">Manage Menu</a>
+                    </div>
+                    <div class="admin-card-content">
+                        <div id="popularItems" class="admin-popular-items">
+                            <div class="admin-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <span>Loading menu data...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservations Section -->
+        <section id="reservations" class="admin-section">
+            <div class="admin-section-header">
+                <h2>Reservation Management</h2>
+                <div class="admin-section-actions">
+                    <div class="admin-filter-group">
+                        <select id="reservationFilter" class="admin-select">
+                            <option value="all">All Reservations</option>
+                            <option value="today">Today</option>
+                            <option value="tomorrow">Tomorrow</option>
+                            <option value="week">This Week</option>
+                            <option value="pending">Pending</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                    <button id="refreshReservations" class="admin-btn admin-btn-secondary">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh
+                    </button>
+                </div>
+            </div>
+
+            <div class="admin-card">
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Date & Time</th>
+                                <th>Customer</th>
+                                <th>Party Size</th>
+                                <th>Contact</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservationsTableBody">
+                            <tr class="admin-loading-row">
+                                <td colspan="6">
+                                    <div class="admin-loading">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                        <span>Loading reservations...</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Orders Section -->
+        <section id="orders" class="admin-section">
+            <div class="admin-section-header">
+                <h2>Order Management</h2>
+                <div class="admin-section-actions">
+                    <div class="admin-filter-group">
+                        <select id="orderFilter" class="admin-select">
+                            <option value="all">All Orders</option>
+                            <option value="pending">Pending</option>
+                            <option value="preparing">Preparing</option>
+                            <option value="ready">Ready</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                    <button id="refreshOrders" class="admin-btn admin-btn-secondary">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh
+                    </button>
+                </div>
+            </div>
+
+            <div class="admin-card">
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTableBody">
+                            <tr class="admin-loading-row">
+                                <td colspan="7">
+                                    <div class="admin-loading">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                        <span>Loading orders...</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Management Section -->
+        <section id="menu" class="admin-section">
+            <div class="admin-section-header">
+                <h2>Menu Management</h2>
+                <div class="admin-section-actions">
+                    <button id="addMenuItem" class="admin-btn admin-btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Add Menu Item
+                    </button>
+                </div>
+            </div>
+
+            <div class="admin-menu-grid">
+                <div id="menuItemsContainer" class="admin-menu-items">
+                    <div class="admin-loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span>Loading menu items...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customers Section -->
+        <section id="customers" class="admin-section">
+            <div class="admin-section-header">
+                <h2>Customer Management</h2>
+                <div class="admin-section-actions">
+                    <div class="admin-search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="customerSearch" placeholder="Search customers...">
+                    </div>
+                    <button id="refreshCustomers" class="admin-btn admin-btn-secondary">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh
+                    </button>
+                </div>
+            </div>
+
+            <div class="admin-card">
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Total Orders</th>
+                                <th>Last Visit</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customersTableBody">
+                            <tr class="admin-loading-row">
+                                <td colspan="7">
+                                    <div class="admin-loading">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                        <span>Loading customers...</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics" class="admin-section">
+            <div class="admin-section-header">
+                <h2>Analytics & Reports</h2>
+                <div class="admin-section-actions">
+                    <select id="analyticsFilter" class="admin-select">
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="quarter">This Quarter</option>
+                        <option value="year">This Year</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="admin-analytics-grid">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>Revenue Overview</h3>
+                    </div>
+                    <div class="admin-card-content">
+                        <div id="revenueChart" class="admin-chart-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Revenue chart will be displayed here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>Popular Items</h3>
+                    </div>
+                    <div class="admin-card-content">
+                        <div id="popularChart" class="admin-chart-placeholder">
+                            <i class="fas fa-chart-pie"></i>
+                            <p>Popular items chart will be displayed here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>Customer Activity</h3>
+                    </div>
+                    <div class="admin-card-content">
+                        <div id="activityChart" class="admin-chart-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                            <p>Customer activity chart will be displayed here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="admin-section">
+            <div class="admin-section-header">
+                <h2>Restaurant Settings</h2>
+            </div>
+
+            <div class="admin-settings-grid">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>Business Hours</h3>
+                    </div>
+                    <div class="admin-card-content">
+                        <div class="admin-form-group">
+                            <label>Monday - Thursday</label>
+                            <div class="admin-time-inputs">
+                                <input type="time" value="17:00" class="admin-input">
+                                <span>to</span>
+                                <input type="time" value="22:00" class="admin-input">
+                            </div>
+                        </div>
+                        <div class="admin-form-group">
+                            <label>Friday - Saturday</label>
+                            <div class="admin-time-inputs">
+                                <input type="time" value="17:00" class="admin-input">
+                                <span>to</span>
+                                <input type="time" value="23:00" class="admin-input">
+                            </div>
+                        </div>
+                        <div class="admin-form-group">
+                            <label>Sunday</label>
+                            <div class="admin-time-inputs">
+                                <input type="time" value="16:00" class="admin-input">
+                                <span>to</span>
+                                <input type="time" value="21:00" class="admin-input">
+                            </div>
+                        </div>
+                        <button class="admin-btn admin-btn-primary">Save Hours</button>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>Restaurant Information</h3>
+                    </div>
+                    <div class="admin-card-content">
+                        <div class="admin-form-group">
+                            <label>Restaurant Name</label>
+                            <input type="text" value="Bella Vista Restaurant" class="admin-input">
+                        </div>
+                        <div class="admin-form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" value="(555) 123-4567" class="admin-input">
+                        </div>
+                        <div class="admin-form-group">
+                            <label>Email</label>
+                            <input type="email" value="info@bellavista.com" class="admin-input">
+                        </div>
+                        <div class="admin-form-group">
+                            <label>Address</label>
+                            <textarea class="admin-textarea" rows="3">123 Culinary Street, Food District, NY 10001</textarea>
+                        </div>
+                        <button class="admin-btn admin-btn-primary">Save Information</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h3 id="adminModalTitle">Modal Title</h3>
+                <button class="admin-modal-close">&times;</button>
+            </div>
+            <div class="admin-modal-body" id="adminModalBody">
+                Modal content goes here
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="adminNotifications" class="admin-notifications"></div>
+
+    <!-- Scripts -->
+    <script src="js/admin.js"></script>
+</body>
+</html>

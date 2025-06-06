@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" aria-label="Elegant restaurant background with warm orange gradient and subtle food elements">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E67300" />
+      <stop offset="50%" stop-color="#FF8C1A" />
+      <stop offset="100%" stop-color="#E67300" />
+    </linearGradient>
+    
+    <radialGradient id="accentGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+    </radialGradient>
+    
+    <linearGradient id="overlayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(48,61,79,0.1)" />
+      <stop offset="100%" stop-color="rgba(48,61,79,0.3)" />
+    </linearGradient>
+
+    <!-- Patterns -->
+    <pattern id="subtlePattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.08)"/>
+      <circle cx="25" cy="25" r="0.5" fill="rgba(255,255,255,0.05)"/>
+      <circle cx="75" cy="75" r="0.5" fill="rgba(255,255,255,0.05)"/>
+    </pattern>
+
+    <!-- Filter for soft glow -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main Background -->
+  <rect width="1920" height="1080" fill="url(#mainGradient)"/>
+  
+  <!-- Subtle Pattern Overlay -->
+  <rect width="1920" height="1080" fill="url(#subtlePattern)" opacity="0.3"/>
+
+  <!-- Decorative Elements -->
+  <!-- Large accent circles -->
+  <circle cx="300" cy="200" r="120" fill="url(#accentGradient)" opacity="0.6"/>
+  <circle cx="1600" cy="300" r="80" fill="url(#accentGradient)" opacity="0.4"/>
+  <circle cx="200" cy="800" r="100" fill="url(#accentGradient)" opacity="0.5"/>
+  <circle cx="1700" cy="850" r="90" fill="url(#accentGradient)" opacity="0.3"/>
+
+  <!-- Abstract food-inspired shapes -->
+  <!-- Plate shape -->
+  <g transform="translate(1400, 150)" opacity="0.1">
+    <circle cx="0" cy="0" r="60" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <circle cx="0" cy="0" r="45" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  </g>
+
+  <!-- Wine glass silhouette -->
+  <g transform="translate(400, 900)" opacity="0.08">
+    <path d="M-15,0 Q-15,-30 0,-30 Q15,-30 15,0 L12,20 Q12,25 10,25 L-10,25 Q-12,25 -12,20 Z" 
+          fill="rgba(255,255,255,0.4)"/>
+    <rect x="-20" y="25" width="40" height="3" fill="rgba(255,255,255,0.4)"/>
+  </g>
+
+  <!-- Chef hat silhouette -->
+  <g transform="translate(1600, 700)" opacity="0.06">
+    <ellipse cx="0" cy="10" rx="25" ry="8" fill="rgba(255,255,255,0.3)"/>
+    <path d="M-25,10 Q-25,-10 -15,-20 Q-5,-25 5,-25 Q15,-25 25,-20 Q25,-10 25,10" 
+          fill="rgba(255,255,255,0.3)"/>
+  </g>
+
+  <!-- Cutlery silhouettes -->
+  <g transform="translate(150, 400)" opacity="0.07">
+    <!-- Fork -->
+    <rect x="-1" y="0" width="2" height="40" fill="rgba(255,255,255,0.3)"/>
+    <rect x="-6" y="-8" width="2" height="12" fill="rgba(255,255,255,0.3)"/>
+    <rect x="-2" y="-8" width="2" height="12" fill="rgba(255,255,255,0.3)"/>
+    <rect x="2" y="-8" width="2" height="12" fill="rgba(255,255,255,0.3)"/>
+    <rect x="6" y="-8" width="2" height="12" fill="rgba(255,255,255,0.3)"/>
+  </g>
+
+  <g transform="translate(180, 400)" opacity="0.07">
+    <!-- Knife -->
+    <rect x="-1" y="0" width="2" height="40" fill="rgba(255,255,255,0.3)"/>
+    <path d="M-1,-15 L-3,-15 Q-5,-10 -5,0 Q-5,10 -3,15 L-1,15" 
+          fill="rgba(255,255,255,0.3)"/>
+  </g>
+
+  <!-- Decorative swirls -->
+  <g opacity="0.1">
+    <path d="M800,200 Q850,150 900,200 Q950,250 900,300 Q850,350 800,300" 
+          fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    <path d="M1100,600 Q1150,550 1200,600 Q1250,650 1200,700" 
+          fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  </g>
+
+  <!-- Floating elements for depth -->
+  <g opacity="0.05">
+    <circle cx="500" cy="300" r="3" fill="rgba(255,255,255,0.6)">
+      <animate attributeName="cy" values="300;280;300" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1200" cy="500" r="2" fill="rgba(255,255,255,0.5)">
+      <animate attributeName="cy" values="500;485;500" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="800" cy="750" r="2.5" fill="rgba(255,255,255,0.4)">
+      <animate attributeName="cy" values="750;730;750" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Subtle geometric pattern in corners -->
+  <g opacity="0.04">
+    <!-- Top left corner -->
+    <polygon points="0,0 100,0 0,100" fill="rgba(255,255,255,0.2)"/>
+    <!-- Top right corner -->
+    <polygon points="1920,0 1820,0 1920,100" fill="rgba(255,255,255,0.15)"/>
+    <!-- Bottom left corner -->
+    <polygon points="0,1080 100,1080 0,980" fill="rgba(255,255,255,0.15)"/>
+    <!-- Bottom right corner -->
+    <polygon points="1920,1080 1820,1080 1920,980" fill="rgba(255,255,255,0.2)"/>
+  </g>
+
+  <!-- Final overlay for depth and atmosphere -->
+  <rect width="1920" height="1080" fill="url(#overlayGradient)" opacity="0.3"/>
+  
+  <!-- Vignette effect -->
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.2)" />
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+</svg>

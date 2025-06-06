@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Bella Vista Restaurant</title>
+    <meta name="description" content="Explore our exquisite menu featuring fresh Italian cuisine, seasonal specialties, and carefully curated wine selection.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Bella Vista</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link active">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Menu</h1>
+            <p class="page-subtitle">Discover our carefully crafted dishes made with the finest ingredients</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="appetizers">Appetizers</button>
+                <button class="filter-btn" data-category="pasta">Pasta</button>
+                <button class="filter-btn" data-category="mains">Main Courses</button>
+                <button class="filter-btn" data-category="desserts">Desserts</button>
+                <button class="filter-btn" data-category="beverages">Beverages</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-section">
+        <div class="container">
+            <!-- Appetizers -->
+            <div class="menu-category" data-category="appetizers">
+                <h2 class="category-title">Appetizers</h2>
+                <div class="menu-grid">
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Bruschetta Trio</h3>
+                            <span class="price">$14</span>
+                        </div>
+                        <p class="description">Three varieties: classic tomato basil, roasted pepper tapenade, and wild mushroom</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Burrata & Prosciutto</h3>
+                            <span class="price">$18</span>
+                        </div>
+                        <p class="description">Creamy burrata cheese with San Daniele prosciutto, arugula, and aged balsamic</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Seafood Carpaccio</h3>
+                            <span class="price">$22</span>
+                        </div>
+                        <p class="description">Thinly sliced raw tuna and salmon with citrus vinaigrette and capers</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Antipasto Board</h3>
+                            <span class="price">$26</span>
+                        </div>
+                        <p class="description">Selection of cured meats, artisanal cheeses, olives, and seasonal accompaniments</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pasta -->
+            <div class="menu-category" data-category="pasta">
+                <h2 class="category-title">Pasta</h2>
+                <div class="menu-grid">
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Truffle Risotto</h3>
+                            <span class="price">$28</span>
+                        </div>
+                        <p class="description">Creamy Arborio rice with black truffle, wild mushrooms, and aged Parmesan</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Lobster Ravioli</h3>
+                            <span class="price">$32</span>
+                        </div>
+                        <p class="description">House-made ravioli filled with lobster and ricotta in saffron cream sauce</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Carbonara Classica</h3>
+                            <span class="price">$24</span>
+                        </div>
+                        <p class="description">Traditional Roman pasta with guanciale, eggs, Pecorino Romano, and black pepper</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Pappardelle Bolognese</h3>
+                            <span class="price">$26</span>
+                        </div>
+                        <p class="description">Wide ribbon pasta with slow-cooked meat sauce and fresh herbs</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Courses -->
+            <div class="menu-category" data-category="mains">
+                <h2 class="category-title">Main Courses</h2>
+                <div class="menu-grid">
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Osso Buco</h3>
+                            <span class="price">$36</span>
+                        </div>
+                        <p class="description">Braised veal shanks with saffron risotto and gremolata</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Pan-Seared Salmon</h3>
+                            <span class="price">$32</span>
+                        </div>
+                        <p class="description">Atlantic salmon with lemon herb butter and seasonal vegetables</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Beef Tenderloin</h3>
+                            <span class="price">$42</span>
+                        </div>
+                        <p class="description">Grilled filet mignon with red wine reduction and roasted root vegetables</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Chicken Parmigiana</h3>
+                            <span class="price">$28</span>
+                        </div>
+                        <p class="description">Breaded chicken breast with marinara, mozzarella, and fresh basil</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category" data-category="desserts">
+                <h2 class="category-title">Desserts</h2>
+                <div class="menu-grid">
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Tiramisu</h3>
+                            <span class="price">$12</span>
+                        </div>
+                        <p class="description">Classic Italian dessert with espresso-soaked ladyfingers and mascarpone</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Panna Cotta</h3>
+                            <span class="price">$10</span>
+                        </div>
+                        <p class="description">Vanilla bean panna cotta with seasonal berry compote</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Chocolate Lava Cake</h3>
+                            <span class="price">$14</span>
+                        </div>
+                        <p class="description">Warm chocolate cake with molten center, served with vanilla gelato</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Cannoli Siciliani</h3>
+                            <span class="price">$11</span>
+                        </div>
+                        <p class="description">Traditional Sicilian pastry shells filled with sweet ricotta and chocolate chips</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div class="menu-category" data-category="beverages">
+                <h2 class="category-title">Beverages</h2>
+                <div class="menu-grid">
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>House Wine Selection</h3>
+                            <span class="price">$8</span>
+                        </div>
+                        <p class="description">Carefully curated selection of Italian and international wines by the glass</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Craft Cocktails</h3>
+                            <span class="price">$12</span>
+                        </div>
+                        <p class="description">Signature cocktails crafted with premium spirits and fresh ingredients</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Espresso & Coffee</h3>
+                            <span class="price">$4</span>
+                        </div>
+                        <p class="description">Authentic Italian espresso, cappuccino, and specialty coffee drinks</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="menu-item animate-fade-in">
+                        <div class="menu-item-header">
+                            <h3>Fresh Juices</h3>
+                            <span class="price">$5</span>
+                        </div>
+                        <p class="description">Freshly squeezed seasonal fruit juices and sparkling water</p>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation CTA -->
+    <section class="reservation-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience Our Menu?</h2>
+                <p>Make a reservation and let our chefs prepare an unforgettable meal for you</p>
+                <a href="contact.html" class="btn btn-primary">Make Reservation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bella Vista</h3>
+                    <p>Experience the finest Italian cuisine with locally sourced ingredients and exceptional service.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Culinary Street, Food District</p>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@bellavista.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <div class="hours-info">
+                        <p>Monday - Thursday: 5:00 PM - 10:00 PM</p>
+                        <p>Friday - Saturday: 5:00 PM - 11:00 PM</p>
+                        <p>Sunday: 4:00 PM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

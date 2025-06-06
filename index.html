@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Vista - Fine Dining Restaurant</title>
+    <meta name="description" content="Experience exceptional fine dining at Bella Vista. Fresh ingredients, expertly crafted dishes, and unforgettable atmosphere.">
+    <meta name="keywords" content="restaurant, fine dining, food, Italian cuisine, local ingredients">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Bella Vista</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin.html" class="nav-link" style="color: hsl(var(--primary));">Admin</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title animate-fade-up">Welcome to Bella Vista</h1>
+                <p class="hero-subtitle animate-fade-up">Experience the finest Italian cuisine with locally sourced ingredients and exceptional service</p>
+                <div class="hero-actions animate-fade-up">
+                    <a href="menu.html" class="btn btn-primary">View Menu</a>
+                    <a href="contact.html" class="btn btn-secondary">Make Reservation</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Bella Vista</h2>
+                <p class="section-subtitle">Discover what makes our restaurant special</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We source the finest local and organic ingredients to create exceptional dishes that celebrate natural flavors.</p>
+                </div>
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Expert Chefs</h3>
+                    <p>Our culinary team brings years of experience and passion to every dish, creating memorable dining experiences.</p>
+                </div>
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
+                    <h3>Fine Dining</h3>
+                    <p>Elegant atmosphere, attentive service, and carefully curated wine selection for the perfect evening out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Dishes Section -->
+    <section class="signature-dishes" id="signature">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Signature Dishes</h2>
+                <p class="section-subtitle">Taste our chef's special creations</p>
+            </div>
+            <div class="dishes-grid">
+                <div class="dish-card animate-fade-in">
+                    <div class="dish-image">
+                        <i class="fas fa-hamburger dish-placeholder"></i>
+                    </div>
+                    <div class="dish-content">
+                        <h3>Truffle Risotto</h3>
+                        <p>Creamy Arborio rice with black truffle, wild mushrooms, and aged Parmesan</p>
+                        <span class="dish-price">$28</span>
+                    </div>
+                </div>
+                <div class="dish-card animate-fade-in">
+                    <div class="dish-image">
+                        <i class="fas fa-fish dish-placeholder"></i>
+                    </div>
+                    <div class="dish-content">
+                        <h3>Pan-Seared Salmon</h3>
+                        <p>Atlantic salmon with lemon herb butter and seasonal vegetables</p>
+                        <span class="dish-price">$32</span>
+                    </div>
+                </div>
+                <div class="dish-card animate-fade-in">
+                    <div class="dish-image">
+                        <i class="fas fa-drumstick-bite dish-placeholder"></i>
+                    </div>
+                    <div class="dish-content">
+                        <h3>Osso Buco</h3>
+                        <p>Braised veal shanks with saffron risotto and gremolata</p>
+                        <span class="dish-price">$36</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-action">
+                <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation CTA -->
+    <section class="reservation-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for an Unforgettable Experience?</h2>
+                <p>Book your table today and let us create a memorable evening for you</p>
+                <a href="contact.html" class="btn btn-primary">Make Reservation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bella Vista</h3>
+                    <p>Experience the finest Italian cuisine with locally sourced ingredients and exceptional service.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Culinary Street, Food District</p>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@bellavista.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <div class="hours-info">
+                        <p>Monday - Thursday: 5:00 PM - 10:00 PM</p>
+                        <p>Friday - Saturday: 5:00 PM - 11:00 PM</p>
+                        <p>Sunday: 4:00 PM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
